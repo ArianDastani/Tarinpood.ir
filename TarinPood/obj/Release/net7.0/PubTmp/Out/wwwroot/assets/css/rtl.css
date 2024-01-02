@@ -1,0 +1,617 @@
+/*================================================
+RTL Default Area CSS
+=================================================*/
+[type="email"], [type="number"], [type="tel"], [type="url"] {
+  direction: rtl;
+}
+.form-check label, .newsletter, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, span, p, li, a {
+letter-spacing: 0px !important;
+font-family: "Vazirmatn RD FD", sans-serif;
+}
+.odometer.odometer-auto-theme,.odometer.odometer-theme-default{direction: ltr;font-family: "Vazirmatn RD FD", sans-serif;}
+.coming-soon-area .coming-soon .list ul {
+  direction: ltr;
+}
+button, input, optgroup, select, textarea {
+font-family: "Vazirmatn RD FD", sans-serif;
+}
+#timer {
+  direction: ltr;
+}
+
+.accordion-button {
+    padding: 15px 0px 15px 35px!important;
+}
+.blog-details-text-area .blog-list ul li i {
+    margin-right: unset!important;
+    margin-left: 10px;
+}
+.customer-support-area .contact-list li i {
+    margin-right: unset!important;
+    margin-left: 10px;
+}
+
+
+.popup .popup-content .close-btn {
+    right: unset !important;
+    left: 20px !important;
+}
+.about-img-area .about-img-text {
+    left: unset !important;
+    right: 53% !important;
+}
+.about-img-area::before {
+  left: unset !important;
+  right: 0 !important;
+}
+.about-img-area .about-img-text::before {
+  -webkit-clip-path: polygon(10% 0%, 90% 0, 100% 100%, 0 100%);
+          clip-path: polygon(10% 0%, 90% 0, 100% 100%, 0 100%);
+  right: unset !important;
+  left: 10% !important;
+}
+.working-process-card-2 span {
+    margin-left: unset !important;
+    margin-right: auto !important;
+}
+.about-img-area-3 {
+    padding-left: unset !important;
+    padding-right: 15px;
+}
+.about-img-area-3::before {
+  left: unset !important;
+  right: 0;
+}
+.about-img-area-3 .about-img-text-3 {
+  left: unset !important;
+  right: 0px;
+}
+
+.pl-20 {
+  padding-left: 0px;
+  padding-right: 20px;
+}
+
+.pr-20 {
+  padding-left: 20px;
+  padding-right: 0px;
+}
+
+.form-control {
+  text-align: right;
+}
+
+.nice-select {
+  text-align: right !important;
+}
+
+.nice-select::after {
+  left: 12px;
+  right: unset;
+}
+
+.nice-select .option {
+  text-align: start;
+}
+
+/*================================================
+Header Area CSS
+=================================================*/
+.main-nav nav .navbar-nav .nav-item a.dropdown-toggle {
+  padding-left: 20px;
+  padding-right: 0px;
+}
+
+.main-nav nav .navbar-nav .nav-item a.dropdown-toggle i {
+  left: 0;
+  right: unset;
+}
+
+.main-nav nav .navbar-nav .nav-item a.dropdown-toggle::after {
+  left: 0;
+  right: unset;
+}
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu {
+  left: unset;
+  right: 0;
+  text-align: right;
+}
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li a {
+  padding-right: 20px;
+}
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li a i {
+  left: 10px !important;
+  right: unset !important;
+  top: 45%;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu {
+  right: 101%;
+  left: unset;
+}
+
+.menu-sidebar ul li {
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+.menu-sidebar ul li:first-child {
+  margin-left: 0px;
+}
+
+/*================================================
+Topbar Area CSS
+=================================================*/
+.topbar-social-icons {
+  margin-left: 0px;
+  margin-right: 20px;
+}
+
+.topbar-left-area ul li {
+  margin-left: 20px;
+}
+
+.topbar-left-area ul li a {
+  margin-right: 0;
+}
+
+/*================================================
+Default Button Area CSS
+=================================================*/
+.default-button i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-left: 0px;
+  margin-right: 8px;
+}
+
+.section-bottom-link i {
+  padding-left: 0;
+  padding-right: 5px;
+}
+
+.read-more-btn i {
+  margin-left: 0px;
+  margin-right: 5px;
+}
+
+/*================================================
+Index 01 Banner Area CSS
+=================================================*/
+.banner-img-area .secondary-img {
+  right: unset;
+  left: 0;
+}
+
+.banner-text-area h6::before {
+  left: -110px;
+}
+
+/*================================================
+Index 01 Sign Up Area CSS
+=================================================*/
+.sign-up::after {
+  right: unset;
+  left: 0;
+}
+
+/*================================================
+Index 01 Pricing Area CSS
+=================================================*/
+.pricing-card ul li i {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+/*================================================
+Index 01 Testimonials Area CSS
+=================================================*/
+.testimonial-card .testimonial-intro-area img {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+/*================================================
+Index 01 Newsletter Area CSS
+=================================================*/
+.newsletter::before {
+  left: 0;
+  right: unset;
+  -webkit-clip-path: polygon(0% 0, 75% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0, 75% 0, 100% 100%, 0% 100%);
+}
+
+/*================================================
+Index 01 Footer Area CSS
+=================================================*/
+.footer-links ul li a {
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+.footer-links ul li a::before {
+  right: 0;
+  left: unset;
+}
+
+.footer-lp {
+  padding-left: 0;
+  padding-right: 50px;
+}
+
+.footer-contact-card {
+  padding-left: 0;
+  padding-right: 55px;
+}
+
+.footer-contact-card i {
+  left: unset;
+  right: 0;
+}
+
+.progress-wrap {
+  left: 30px;
+  right: unset;
+}
+
+/*================================================
+Index 02 Banner Area CSS
+=================================================*/
+.home-banner-single-slide::before {
+  background: rgb(33,37,41);
+  background: linear-gradient(90deg, rgba(33,37,41,0.036852240896358524) 20%, rgba(33,37,41,0.5466561624649859) 86%);
+}
+
+.home-banner-slider-area .owl-dots {
+  right: unset;
+  left: 5%;
+}
+
+.home-banner .shape1 {
+  left: unset;
+  right: 0;
+}
+
+.home-banner .shape2 {
+  right: unset;
+  left: 0;
+}
+
+/*================================================
+Index 02 Features Area CSS
+=================================================*/
+.features-card-2 .features-card-header h4 {
+  padding-left: 0px;
+  padding-right: 40px;
+}
+
+.features-card-2 .features-card-header h4::before {
+  left: unset;
+  right: 5px;
+}
+
+/*================================================
+Index 02 Services Area CSS
+=================================================*/
+.service-card-2 .service-card-text-2 .service-card-text-header i {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+/*================================================
+Index 02 Working Process Area CSS
+=================================================*/
+.working-process-card-2 .working-process-title-2 img {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+/*================================================
+Index 03 Banner Area CSS
+=================================================*/
+.banner-img-area-3 .video-popup {
+  left: unset;
+  right: -45px;
+}
+
+.banner-img-area-3 .swiper-pagination {
+  padding-left: 5%;
+  padding-right: 0;
+}
+
+.banner-img-area-3 .swiper-pagination .swiper-pagination-current::before {
+  right: 21px;
+}
+
+.banner-text-area-3 {
+  padding-right: 15px;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/*================================================
+Index 03 Features Area CSS
+=================================================*/
+.features-card-3 .features-card-text-area .features-card-header-3 img {
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+.section-bottom-text a i {
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+/*================================================
+Index 03 ABout Area CSS
+=================================================*/
+.about-list ul li {
+  padding-left: 0px;
+  padding-right: 25px;
+}
+
+.about-list ul li::before {
+  left: unset;
+  right: 0;
+}
+
+.about-img-area-3 .about-img-text-3 {
+  left: unset;
+  right: 0;
+}
+
+/*================================================
+Index 03 Working Process Area CSS
+=================================================*/
+.working-process-card-3 span {
+  right: unset;
+  left: 5%;
+}
+
+/*================================================
+Index 03 Testimonials Area CSS
+=================================================*/
+.testimonial-card-3 i {
+  left: 8%;
+  right: unset;
+}
+
+.testimonial-card-3 .testimonial-intro-area img {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.uni-banner-text-area ul li {
+  margin-left: 30px;
+  margin-right: 0;
+}
+
+.uni-banner-text-area ul li::before {
+  left: -21px;
+  right: unset;
+}
+
+.sidebar-download .default-button i {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.sidebar-categories ul li a span i {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.cart-footer-area .dfb {
+  float: left;
+}
+
+.product-description-area .pd-description .production-description-list li i {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.payment-box .payment-method p [type="radio"] + label {
+  padding-left: 0px;
+  padding-right: 27px;
+}
+
+.payment-box .payment-method p [type="radio"] + label::before {
+  left: unset;
+  right: 0;
+}
+
+.payment-box .payment-method p [type="radio"] + label::after {
+  right: 3px;
+  left: unset;
+}
+
+.accordion-button {
+  padding-left: 35px;
+  padding-right: 15px;
+}
+
+.accordion-button i {
+  right: unset;
+  left: 0;
+}
+
+/*================================================
+Terms page Area CSS
+=================================================*/
+.terms .payment li {
+  padding-left: 0px;
+  padding-right: 20px;
+}
+
+.terms .payment li::before {
+  left: unset;
+  right: 0px;
+}
+
+.terms ul li span {
+  margin-left: 8px;
+  margin-right: 0px;
+}
+
+/*================================================
+Comments page Area CSS
+=================================================*/
+.comment-card {
+  padding-left: 0px;
+  padding-right: 95px;
+}
+
+.comment-card img {
+  left: unset;
+  right: 0;
+}
+
+/*================================================
+Responsive Area CSS
+=================================================*/
+@media only screen and (max-width: 767px) {
+  /*================================================
+    Default Area CSS
+    =================================================*/
+  .pl-20 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .pr-20 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .progress-wrap {
+    left: 15px;
+  }
+  .menu-small-device li {
+    margin-left: 10px;
+  }
+  /*================================================
+    Topbar Area CSS
+    =================================================*/
+  .topbar-left-area ul li {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  /*================================================
+    Index 01 Banner Area CSS
+    =================================================*/
+  .banner-text-area h6::before {
+    left: -75px;
+  }
+  /*================================================
+    Footer Area CSS
+    =================================================*/
+  .footer-lp {
+    padding: 0;
+  }
+  /*================================================
+    Index 02 Banner Area CSS
+    =================================================*/
+  .home-banner-slider-area .owl-dots {
+    left: 50%;
+    right: unset;
+  }
+  /*================================================
+    Index 03 Banner Area CSS
+    =================================================*/
+  .banner-text-area-3 {
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .banner-img-area-3 .video-popup {
+    right: unset;
+    left: 50%;
+  }
+  .comment-card {
+    padding: 0;
+  }
+  .g-5, .gx-5 {
+    --bs-gutter-x: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /*================================================
+    Default Area CSS
+    =================================================*/
+  .pl-20 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .pr-20 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .progress-wrap {
+    left: 15px;
+  }
+  /*================================================
+    Topbar Area CSS
+    =================================================*/
+  .topbar-left-area ul li {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .footer-lp {
+    padding: 0;
+  }
+  /*================================================
+    Index 02 Banner Area CSS
+    =================================================*/
+  .home-banner-slider-area .owl-dots {
+    left: 50%;
+    right: unset;
+  }
+  /*================================================
+    Index 03 Banner Area CSS
+    =================================================*/
+  .banner-text-area-3 {
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .banner-img-area-3 .video-popup {
+    right: unset;
+    left: 50%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .mean-container a.meanmenu-reveal {
+    left: 0 !important;
+    right: auto !important;
+  }
+  .mobile-nav .logo {
+    left: unset;
+    right: 0px;
+  }
+  .mean-container .mean-nav ul li a {
+    text-align: right;
+  }
+  .mean-container .mean-nav ul li a.mean-expand {
+    width: 95%;
+    text-align: left;
+  }
+  .menu-small-device {
+    left: 30px !important;
+    right: unset !important;
+  }
+  .menu-small-device .default-button {
+    margin-left: 15px;
+  }
+  .menu-small-device li {
+    margin-left: 15px;
+  }
+  .menu-small-device .cart-icon {
+    margin-right: 0;
+  }
+}
+/*# sourceMappingURL=rtl.css.map */

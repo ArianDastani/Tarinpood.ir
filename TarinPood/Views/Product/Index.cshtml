@@ -1,0 +1,89 @@
+﻿
+@model List<Application.Services.Product.Querise.IGetProductForIndexService.GetProductForIndexDto>
+@{
+    ViewData["Title"] = "محصولات ما";
+}
+
+<div class="uni-banner">
+    <div class="container-fluid container-large">
+        <div style="text-align:center;" class="uni-banner-text-area">
+            <h2> محصولات ما</h2>
+            <ul>
+                <li><a href="/">خانه</a></li>
+                <li> محصولات ما</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="products ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="product-page-topbar">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="ppt-left-side">
+                            </div>
+                        </div>
+                        @* <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="ppt-right-area">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected disabled>مرتب سازی پیش فرض</option>
+                                    <option value="1">محصولات جدید</option>
+                                    <option value="2">ارزان ترین</option>
+                                    <option value="3">گران ترین</option>
+                                </select>
+                            </div>
+                        </div> *@
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="row justify-content-center">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <a asp-controller="product" asp-action="Detail" asp-route-id="@item.ProductId">
+                                    <div class="team-card-2">
+                                        <div class="team-card-img ">
+                                            <img class="team-card-img-size" style="height:220px;" src="~/content/product/@item.ProductMainPicture" alt="@item.ProductName">
+                                        </div>
+                                        <div class="team-card-text-2">
+                                            <div class="team-card-text-intro">
+                                                <h4>@item.ProductName</h4>
+                                            </div>
+                                            <div class="social-icons">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        }
+             
+                           
+
+
+
+
+                    </div>
+                </div>
+
+               @*  <div class="paginations mt-30">
+                    <ul>
+                        <li><a href="products.html"><span><i class="fas fa-angle-right"></i></span></a></li>
+                        <li class="active"><a href="products.html"><span>1</span></a></li>
+                        <li><a href="products.html"><span>2</span></a></li>
+                        <li><a href="products.html"><span>3</span></a></li>
+                        <li><a href="products.html"><span><i class="fas fa-angle-left"></i></span></a></li>
+                    </ul>
+                </div> *@
+
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

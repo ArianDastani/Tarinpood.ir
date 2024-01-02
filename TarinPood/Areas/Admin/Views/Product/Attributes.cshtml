@@ -1,0 +1,139 @@
+﻿
+@model List<Application.Services.Product.Command.AddAttripute.AttributeDto>
+
+
+<div class="page-body">
+    <div class="container-fluid">
+        <div class="page-title">
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <h3>.</h3>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/"> <i data-feather="home"> </i></a></li>
+                        <li class="breadcrumb-item">جدول ویژگی ها</li>
+                        <li class="breadcrumb-item active">جداول بوت استرپ پایه</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Container-fluid starts-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5> ویژگی ها</h5><span>
+                           
+                        </span>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">نام</th>
+                                    <td scope="col">عملیات</td>
+                               
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <th scope="row">@item.Id</th>
+                                        <td>@item.Name</td>
+                                        <td><button onclick="removeAtt('@item.Id')" class="btn btn-danger">حذف</button></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header pb-0">
+                    <h5>افزودن ویژگی</h5>
+                </div>
+                <form novalidate asp-area="admin" asp-controller="Product" asp-action="AddAttripute" method="post" class="form theme-form">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3 row">
+                                        <input name="AttriputeName" placeholder="جنس،رنگ،نوع و ..." required="" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-end">
+                        <button class="btn btn-primary" type="submit">ثبت ویژگی</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Container-fluid Ends-->
+</div>
+<link href="~/lib/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+
+@section Scripts{
+    <script src="~/lib/sweetalert2/sweetalert2.min.js"></script>
+    <script>
+        function removeAtt(Id) {
+            swal.fire({
+                title: 'حذف ویژگی',
+                text: "کاربر گرامی از حذف ویژگی مطمئن هستید؟",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#7cacbe',
+                confirmButtonText: 'بله ،حذف شود',
+                cancelButtonText: 'خیر'
+            }).then((result) => {
+                if (result.value) {
+                    var postData = {
+                        'Id': Id
+                    };
+
+                    $.ajax({
+                        contentType: 'application/x-www-form-urlencoded',
+                        dataType: 'json',
+                        type: "POST",
+                        url: "/admin/Product/RemoveProductAttributes",
+                        data: postData,
+                        success: function (data) {
+                            if (data.isSuccess == true) {
+                                swal.fire(
+                                    'موفق!',
+                                    data.message,
+                                    'success'
+                                ).then(function (isConfirm) {
+                                    location.reload();
+                                });
+                            }
+                            else {
+
+                                swal.fire(
+                                    'هشدار!',
+                                    data.message,
+                                    'warning'
+                                );
+
+                            }
+                        },
+                        error: function (request, status, error) {
+                            alert(request.responseText);
+                        }
+
+
+                    });
+                }
+            })
+        }
+
+    </script>
+
+}

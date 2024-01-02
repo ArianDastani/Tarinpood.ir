@@ -1,0 +1,277 @@
+﻿
+@using Common.Calender
+@model List<Application.Services.Product.Querise.IGetAllProductForAdminService.ResultGetProductForAdminDto>
+
+<div class="page-body">
+    <div class="container-fluid">
+        <div class="page-title">
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <h3>جدول محصولات</h3>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/"> <i data-feather="home"></i></a></li>
+                        <li class="breadcrumb-item">جداول داده</li>
+                        <li class="breadcrumb-item active">جداول داده ای پایه</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Container-fluid starts-->
+    @*     <div class="container-fluid">
+    <div class="row">
+    <!-- Zero Configuration  Starts-->
+    <div class="col-sm-12">
+    <div class="card">
+    <div class="card-header pb-0">
+    <h5>پیکربندی صفر</h5><span>
+    جداول داده اکثر ویژگی‌های فعال را به صورت پیش‌فرض دارد، بنابراین تنها کاری
+    که برای استفاده از آن با جداول خود نیاز دارید این است که تابع ساخت و ساز را فراخوانی
+    کنید:<code>$().DataTable();</code>.
+    </span><span>
+    همانطور که در این مثال نشان داده شده است، جستجو،
+    سفارش و صفحه‌بندی فوراً به جدول اضافه می‌شود.
+    </span>
+    </div>
+    <div class="card-body">
+    <div class="table-responsive">
+    <table class="display" id="basic-1">
+    <thead>
+    <tr>
+    <th>نام محصول</th>
+    <th>موقعیت شغلی</th>
+    <th>دفتر</th>
+    <th>سن</th>
+    <th>تاریخ شروع</th>
+    <th>حقوق</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>امیر صبوری</td>
+    <td>معمار زشسشسیییییییییییییییییییییییییییییییییییییییییییییییییییییییییییییییییییییییییییییییییییییییی   شسیسشی شس یشی شیسشی سیشسیسشیییسیشسیسیسیسیستم</td>
+    <td>تهران</td>
+    <td>61</td>
+    <td>1396/04/25</td>
+    <td>8,430,000 تومان</td>
+    </tr>
+
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    *@    <!-- Container-fluid Ends-->
+
+    <div class="container-fluid list-products">
+        <div class="row">
+            <!-- Individual column searching (text inputs) Starts-->
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header pb-0">
+                        <h5>لیست محصولات</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive product-table">
+                            <table class="display" id="basic-1">
+                                <thead>
+                                    <tr>
+                                        <th>تصویر</th>
+                                        <th>جزئیات</th>
+                                        <th>وضعیت</th>
+                                        <th>تاریخ ثبت</th>
+                                        <th>عمل</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+
+                                                <a href="/">
+                                                    <img src="~/content/product/@item.ProductMainPicture" />
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="/">
+                                                    <h6> @item.ProductName </h6>
+                                                </a><span>@item.ProductDescription</span>
+                                            </td>
+                                            @if (item.IsActive == true)
+                                            {
+                                                <td class="font-success">فعال</td>
+                                            }
+                                            else
+                                            {
+                                                <td class="font-danger">غیرفعال</td>
+                                            }
+                                            <td>@CalenderConverter.ToShamsi(item.InsertDate)</td>
+                                            <td>
+                                                <button onclick="removeProduct('@item.ProductId')" class="btn btn-danger btn-xs" type="button"
+                                                        data-original-title="btn btn-danger btn-xs" title="">
+                                                    حذف
+                                                </button>
+                                                <button class="btn btn-secondary btn-xs" type="button"
+                                                        data-original-title="btn btn-secondary btn-xs" title="">
+                                                    <a style="color:white;" asp-area="Admin" asp-controller="Product" asp-action="AddNewProduct" asp-route-id="@item.ProductId">ویرایش</a>
+                                                </button>
+                                                <button class="btn btn-success btn-xs" type="button"
+                                                        data-original-title="btn btn-success btn-xs" title="">
+                                                    <a style="color:white;" asp-area="Admin" asp-controller="Product" asp-action="ProductAttributes" asp-route-ProductId="@item.ProductId">ویرایش ویژگی ها</a>
+                                                    
+                                                </button>
+                                                <button onclick="changeIsActiveProduct('@item.ProductId')" style="background-color:#6362e7;" class="btn btn-xs" type="button"
+                                                        data-original-title="btn btn-xs" title="">
+                                                    @(item.IsActive==true?"غیرفعال":"فعال")
+                                                </button>
+                                                
+                                            </td>
+                                        </tr>
+
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<link rel="stylesheet" type="text/css" href="~/admin/assets/css/vendors/datatables.css">
+<link href="~/lib/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+@section Scripts{
+    @*  <script src="~/admin/assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/admin/assets/js/datatable/datatables/datatable.custom.js"></script> *@
+
+    <script src="~/lib/sweetalert2/sweetalert2.min.js"></script>
+    <script src="~/admin/assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/admin/assets/js/rating/jquery.barrating.js"></script>
+    <script src="~/admin/assets/js/rating/rating-script.js"></script>
+    <script src="~/admin/assets/js/owlcarousel/owl.carousel.js"></script>
+    <script src="~/admin/assets/js/ecommerce.js"></script>
+    <script src="~/admin/assets/js/product-list-custom.js"></script>
+
+    <script>
+        function removeProduct(ProductId) {
+            swal.fire({
+                title: 'حذف محصول',
+                text: "کاربر گرامی از حذف محصول مطمئن هستید؟",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#7cacbe',
+                confirmButtonText: 'بله ،حذف شود',
+                cancelButtonText: 'خیر'
+            }).then((result) => {
+                if (result.value) {
+                    var postData = {
+                        'ProductId': ProductId
+                    };
+
+                    $.ajax({
+                        contentType: 'application/x-www-form-urlencoded',
+                        dataType: 'json',
+                        type: "POST",
+                        url: "/admin/Product/removeProduct",
+                        data: postData,
+                        success: function (data) {
+                            if (data.isSuccess == true) {
+                                swal.fire(
+                                    'موفق!',
+                                    data.message,
+                                    'success'
+                                ).then(function (isConfirm) {
+                                    location.reload();
+                                });
+                            }
+                            else {
+
+                                swal.fire(
+                                    'هشدار!',
+                                    data.message,
+                                    'warning'
+                                );
+
+                            }
+                        },
+                        error: function (request, status, error) {
+                            alert(request.responseText);
+                        }
+
+
+                    });
+                }
+            })
+        }
+
+    </script>
+
+    <script>
+        function changeIsActiveProduct(ProductId) {
+            swal.fire({
+                title: 'تغییر وضعیت',
+                text: "کاربر گرامی آیا مطمئن هستید؟",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#7cacbe',
+                confirmButtonText: 'بله ،انجام شود',
+                cancelButtonText: 'خیر'
+            }).then((result) => {
+                if (result.value) {
+                    var postData = {
+                        'ProductId': ProductId
+                    };
+
+                    $.ajax({
+                        contentType: 'application/x-www-form-urlencoded',
+                        dataType: 'json',
+                        type: "POST",
+                        url: "/admin/Product/changeIsActiveProduct",
+                        data: postData,
+                        success: function (data) {
+                            if (data.isSuccess == true) {
+                                swal.fire(
+                                    'موفق!',
+                                    data.message,
+                                    'success'
+                                ).then(function (isConfirm) {
+                                    location.reload();
+                                });
+                            }
+                            else {
+
+                                swal.fire(
+                                    'هشدار!',
+                                    data.message,
+                                    'warning'
+                                );
+
+                            }
+                        },
+                        error: function (request, status, error) {
+                            alert(request.responseText);
+                        }
+
+
+                    });
+                }
+            })
+        }
+
+    </script>
+
+
+}
+
+

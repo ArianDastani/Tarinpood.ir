@@ -1,0 +1,221 @@
+﻿
+@model List<Application.Services.Product.Command.AddAttripute.GetAllAttributeProductDto>
+
+
+
+<div class="page-body">
+    <div class="container-fluid">
+        <div class="page-title">
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <h3>.</h3>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/"> <i data-feather="home"> </i></a></li>
+                        <li class="breadcrumb-item">جدول ویژگی ها</li>
+                        <li class="breadcrumb-item active"></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Container-fluid starts-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5> ویژگی ها</h5><span>
+
+                        </span>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">نام ویژگی</th>
+                                    <th scope="col">مقدار ویژگی</th>
+                                    <td scope="col">عملیات</td>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <th scope="row">@item.ProductAttributeId</th>
+                                        <th>@item.AttributeName</th>
+                                        <td>@item.ProductAttributeContent</td>
+                                        <td>
+                                            <button onclick="showModalEditeAtt('@item.ProductAttributeId','@item.ProductAttributeContent')" class="btn btn-danger">ویرایش</button>
+                                            <button onclick="removeAttProduct('@item.ProductAttributeId')" class="btn btn-danger">حذف</button>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="card-header pb-0">
+            <h5>افزودن ویژگی</h5>
+        </div>
+        <div class="form theme-form">
+            <input id="" type="hidden" />
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                            <label for="basicInput">نام محصول </label>
+                            <select id="AttributeName" required="" asp-items="@ViewBag.Attribute" class="form-control" type="text">
+
+                            </select>
+                    </div>
+                    <div class="col-md-6">
+                            <label for="basicInput">نام محصول </label>
+                            <input id="name" required="" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-end">
+                <button class="btn btn-primary" onclick="addproductatt()" type="submit">ثبت ویژگی</button>
+            </div>
+        </div>
+    </div>
+    <!-- Container-fluid Ends-->
+</div>
+<link href="~/lib/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+
+@section Scripts{
+    <script src="~/lib/sweetalert2/sweetalert2.min.js"></script>
+    <script>
+        function removeAttProduct(Id) {
+            swal.fire({
+                title: 'حذف ویژگی',
+                text: "کاربر گرامی از حذف ویژگی مطمئن هستید؟",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#7cacbe',
+                confirmButtonText: 'بله ،حذف شود',
+                cancelButtonText: 'خیر'
+            }).then((result) => {
+                if (result.value) {
+                    var postData = {
+                        'Id': Id
+                    };
+
+                    $.ajax({
+                        contentType: 'application/x-www-form-urlencoded',
+                        dataType: 'json',
+                        type: "POST",
+                        url: "/admin/Product/RemoveProductAttributes2",
+                        data: postData,
+                        success: function (data) {
+                            if (data.isSuccess == true) {
+                                swal.fire(
+                                    'موفق!',
+                                    data.message,
+                                    'success'
+                                ).then(function (isConfirm) {
+                                    location.reload();
+                                });
+                            }
+                            else {
+
+                                swal.fire(
+                                    'هشدار!',
+                                    data.message,
+                                    'warning'
+                                );
+
+                            }
+                        },
+                        error: function (request, status, error) {
+                            alert(request.responseText);
+                        }
+
+
+                    });
+                }
+            })
+        }
+
+    </script>
+
+    <script>
+        function showModalEditeAtt(ProductAttributeId, ProductAttributeContent) {
+            $("#ProductAttributeId").val(ProductAttributeId);
+            $("#ProductAttributeContent").val(ProductAttributeContent);
+
+            $('#exampleModalCenter').modal('show');
+
+        }
+
+       
+    </script>
+
+    <script>
+        function addproductatt() {
+
+            var id = @ViewBag.ProductId;
+            var name = $("#name").val();
+            var AttributeName = $("#AttributeName").val();
+
+            if (name == "" || AttributeName == "") {
+                alert('ویژگی و مقدار ویژگی را وارد کنید');
+            } else {
+
+                var data = {
+                    'id': id,
+                    'name': name,
+                    'AttributeName': AttributeName
+                };
+
+                $.ajax({
+                    contentType: 'application/x-www-form-urlencoded',
+                    dataType: 'json',
+                    type: "POST",
+                    url: "/admin/product/AddProductAttributes",
+                    data: data,
+                    success: function (data) {
+                        if (data.isSuccess == true) {
+                            swal.fire(
+                                'موفق!',
+                                data.message,
+                                'success'
+                            ).then(function (isConfirm) {
+                                location.replace("/admin/product");
+                            });
+                        }
+                        else {
+
+                            swal.fire(
+                                'هشدار!',
+                                data.message,
+                                'warning'
+                            );
+
+                        }
+                    },
+                    error: function (request, status, error) {
+                        alert(request.responseText);
+                    }
+
+
+                });
+            }
+
+
+
+        }
+    </script>
+
+}

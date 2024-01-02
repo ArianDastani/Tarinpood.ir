@@ -1,0 +1,169 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="../assets/images/logo/favicon-icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/logo/favicon-icon.png" type="image/x-icon">
+    <title>تارین پود - ورود مدیر</title>
+    <link rel="stylesheet" type="text/css" href="~/admin/assets/css/vendors/font-awesome.css">
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="~/admin/assets/css/vendors/icofont.css">
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="~/admin/assets/css/vendors/themify.css">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="~/admin/assets/css/vendors/flag-icon.css">
+    <!-- Feather icon-->
+    <link rel="stylesheet" type="text/css" href="~/admin/assets/css/vendors/feather-icon.css">
+    <!-- Plugins css start-->
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="~/admin/assets/css/vendors/bootstrap.css">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="~/admin/assets/css/style.css">
+    <link id="color" rel="stylesheet" href="~/admin/assets/css/color-1.css" media="screen">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="~/admin/assets/css/responsive.css">
+</head>
+
+<body>
+    <!-- Loader starts-->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="loader-bar"></div>
+            <div class="loader-bar"></div>
+            <div class="loader-bar"></div>
+            <div class="loader-bar"></div>
+            <div class="loader-bar"></div>
+            <div class="loader-ball"></div>
+        </div>
+    </div>
+    <!-- Loader ends-->
+    <!-- page-wrapper Start-->
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-7 order-1">
+                    <img class="bg-img-cover bg-center" src="~/img/signInBackgrund.jpg"
+                         alt="looginpage">
+                </div>
+                <div class="col-xl-5 p-0">
+                    <div class="login-card">
+                        <div class="theme-form login-form needs-validation" >
+                            <h4>ورود</h4>
+                            <h6>خوش آمدید! به حساب کاربری خود وارد شوید.</h6>
+                            <div class="form-group">
+                                <label>نام کاربری</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="icon-email"></i></span>
+                                    <input class="form-control" type="text" required="" id="UserId" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>رمز عبور</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="icon-lock"></i></span>
+                                    <input class="form-control" type="password"  id="Pass" required=""
+                                           placeholder="*********">
+                                    <div class="show-hide"><span class="show"> </span></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <input id="checkbox1" type="checkbox">
+                                    <label class="text-muted" for="checkbox1">مرا به خاطر بسپار</label>
+                                </div>
+                                @* <a class="link" href="forget-password.html">فراموشی رمز عبور؟</a> *@
+                            </div>
+                            <div class="form-group">
+                                <button onclick="regesterUser()" class="btn btn-primary btn-block" type="submit">وارد شوید</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <link href="~/lib/sweetalert2\sweetalert2.min.css" rel="stylesheet" />
+    <!-- page-wrapper end-->
+    
+    <!-- latest jquery-->
+    <script src="~/admin/assets/js/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap js-->
+    <script src="~/admin/assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- feather icon js-->
+    <script src="~/admin/assets/js/icons/feather-icon/feather.min.js"></script>
+    <script src="~/admin/assets/js/icons/feather-icon/feather-icon.js"></script>
+    <!-- scrollbar js-->
+    <!-- Sidebar jquery-->
+    <script src="~/admin/assets/js/config.js"></script>
+    <!-- Plugins JS start-->
+    <!-- Plugins JS Ends-->
+    <!-- Theme js-->
+    <script src="~/admin/assets/js/script.js"></script>
+    <!-- login js-->
+    <!-- Plugin used-->
+    <script src="~/lib/sweetalert2/sweetalert2.min.js"></script>
+
+    <script>
+        function regesterUser() {
+
+            var UserId = $("#UserId").val();
+            var Pass = $("#Pass").val();
+
+
+            var postdata = {
+                'UserId': UserId,
+                'Pass': Pass
+            };
+
+            $.ajax({
+                contentType: 'application/x-www-form-urlencoded',
+                datatype: 'json',
+                type: "POST",
+                url: "/Authentication/Signin",
+                data: postdata,
+                success: function (data) {
+                    if (data.isSuccess == true) {
+                        swal.fire('عملیات موفق!', data.message, 'success').then(function (isConfirm) {
+                            location.reload();
+                            window.location.replace("/admin");
+                        });
+                    } else {
+                        swal.fire(
+                            'هشدار!',
+                            data.message,
+                            'warning'
+                        );
+                    }
+                },
+                error: function (request, status, error) {
+                    swal.fire(
+                        'هشدار!',
+                        request.responseText,
+                        'warning'
+                    );
+                }
+
+
+            });
+
+        }
+    </script>
+
+
+    <script src="../../../files-de.rtl-theme.com/jsdemos/21f532f8f7c2f65db1d73263889e5599f01b744499f7.js?pid=242700"></script>
+
+</body>
+
+
+</html>

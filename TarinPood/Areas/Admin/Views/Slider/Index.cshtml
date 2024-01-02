@@ -1,0 +1,186 @@
+﻿@using Application.Services.Slider;
+@model List<GetAllSliderAdminDto>
+
+<div class="page-body">
+    <div class="container-fluid">
+        <div class="page-title">
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <h3>جدول اسلایدر</h3>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/"> <i data-feather="home"></i></a></li>
+                        <li class="breadcrumb-item">جداول داده</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Container-fluid starts-->
+     <!-- Container-fluid Ends-->
+
+    <div class="container-fluid list-products">
+        <div class="row">
+            <!-- Individual column searching (text inputs) Starts-->
+            <div class="col-sm-12">
+               
+                <div class="card">
+
+                    <div class="card-header pb-0">
+                        <h5>لیست اسلایدر</h5>
+
+                        <div class="btn-showcase text-end">
+                            <button class="btn btn-success" onclick="showModalCreateSlider()" type="submit">افزودن اسلایدر</button>
+                        </div>
+                     
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive product-table">
+                            <table class="display" id="basic-1">
+                                <thead>
+                                    <tr>
+                                        <th>تصویر</th>
+                                        <th>متن اول</th>
+                                        <th>متن دوم</th>
+                                        <th>اولویت نمایش</th>
+                                        <th>عمل</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+
+                                                
+                                                    <img src="~/content/ImageSlider/@item.SliderPicture" />
+                                                
+                                            </td>
+                                            <td>
+                                                <a href="">
+                                                    <h6> @item.SliderH2Content </h6>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="">
+                                                    <h6> @item.SliderH5Content </h6>
+                                                </a>
+                                            </td>
+                                            <td>@item.SliderOrder</td>
+                                            <td>
+                                                <button onclick="removeSlider('@item.SliderId')" class="btn btn-danger btn-xs" type="button"
+                                                        data-original-title="btn btn-danger btn-xs" title="">
+                                                    حذف
+                                                </button>
+                                                <button onclick="showModaleditSlider('@item.SliderId','@item.SliderH2Content','@item.SliderH5Content','@item.SliderOrder')" class="btn btn-secondary btn-xs" type="button"
+                                                        data-original-title="btn btn-secondary btn-xs" title="">
+                                                    ویرایش
+                                                </button>
+                                                
+                                           
+
+                                            </td>
+                                        </tr>
+
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<link rel="stylesheet" type="text/css" href="~/admin/assets/css/vendors/datatables.css">
+<link href="~/lib/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+@section Scripts{
+    @*  <script src="~/admin/assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/admin/assets/js/datatable/datatables/datatable.custom.js"></script> *@
+
+    <script src="~/lib/sweetalert2/sweetalert2.min.js"></script>
+    <script src="~/admin/assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/admin/assets/js/rating/jquery.barrating.js"></script>
+    <script src="~/admin/assets/js/rating/rating-script.js"></script>
+    <script src="~/admin/assets/js/owlcarousel/owl.carousel.js"></script>
+    <script src="~/admin/assets/js/ecommerce.js"></script>
+    <script src="~/admin/assets/js/product-list-custom.js"></script>
+
+    <script>
+        function removeSlider(SliderId) {
+            swal.fire({
+                title: 'حذف اسلایدر',
+                text: "کاربر گرامی از حذف اسلایدر مطمئن هستید؟",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#7cacbe',
+                confirmButtonText: 'بله ،حذف شود',
+                cancelButtonText: 'خیر'
+            }).then((result) => {
+                if (result.value) {
+                    var postData = {
+                        'SliderId': SliderId
+                    };
+
+                    $.ajax({
+                        contentType: 'application/x-www-form-urlencoded',
+                        dataType: 'json',
+                        type: "POST",
+                        url: "/admin/Slider/Remove",
+                        data: postData,
+                        success: function (data) {
+                            if (data.isSuccess == true) {
+                                swal.fire(
+                                    'موفق!',
+                                    data.message,
+                                    'success'
+                                ).then(function (isConfirm) {
+                                    location.reload();
+                                });
+                            }
+                            else {
+
+                                swal.fire(
+                                    'هشدار!',
+                                    data.message,
+                                    'warning'
+                                );
+
+                            }
+                        },
+                        error: function (request, status, error) {
+                            alert(request.responseText);
+                        }
+
+
+                    });
+                }
+            })
+        }
+
+    </script>
+
+    <script>
+        function showModaleditSlider(SliderId, SliderH2Content, SliderH5Content, SliderOrder) {
+            $("#SliderId").val(SliderId);
+            $("#SliderH2Content").val(SliderH2Content);
+            $("#SliderH5Content").val(SliderH5Content);
+            $("#SliderOrder").val(SliderOrder);
+
+            $('#editModalSlider').modal('show');
+
+
+        }
+
+        function showModalCreateSlider() {
+            $("#showModalCreateSlider").modal('show');
+        }
+    </script>
+
+
+}

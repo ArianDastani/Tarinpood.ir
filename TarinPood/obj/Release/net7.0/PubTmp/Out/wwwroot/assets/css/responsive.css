@@ -1,0 +1,1137 @@
+@media only screen and (max-width: 767px) {
+  /*================================================
+    Default Area CSS
+    =================================================*/
+  .ptb-100 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .pt-100 {
+    padding-top: 50px;
+  }
+  .pb-100 {
+    padding-bottom: 50px;
+  }
+  .ptb-70 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .pt-70 {
+    padding-top: 20px;
+  }
+  .pb-70 {
+    padding-bottom: 20px;
+  }
+  .pt-50 {
+    padding-top: 0;
+  }
+  .pt-30 {
+    margin-top: 30px !important;
+  }
+  .pl-20 {
+    padding-left: 0px;
+  }
+  .pr-20 {
+    padding-right: 0px;
+  }
+  :root {
+    --card-title-fontSize: 20px;
+    --fontSize: 13px;
+  }
+  .default-section-title {
+    margin-bottom: 0px;
+  }
+  .default-section-title h3 {
+    font-size: 24px;
+  }
+  .section-content {
+    margin-top: 0px;
+  }
+  .shape {
+    display: none;
+  }
+  .default-button {
+    font-size: 14px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .section-title .default-button {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .slider-card-margin {
+    margin-bottom: 20px;
+  }
+  /*================================================
+    Popup Search Area CSS
+    =================================================*/
+  .popup .hi form {
+    width: 100%;
+  }
+  /*================================================
+    Navigation Area CSS
+    =================================================*/
+  .menu-small-device .default-button {
+    display: none;
+  }
+  /*================================================
+    Topbar Area CSS
+    =================================================*/
+  .topbar-left-area {
+    text-align: center;
+  }
+  .topbar-left-area ul li {
+    padding-top: 0;
+    padding-bottom: 8px;
+  }
+  .topbar-social-icons {
+    text-align: center;
+  }
+  /*================================================
+    Index 01 Banner Area CSS
+    =================================================*/
+  .banner-text-area {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+  .banner-text-area h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  .banner-text-area h6::before {
+    width: 70px;
+  }
+  .banner-text-area .default-button {
+    margin-top: 10px;
+  }
+  /*================================================
+    Index 01 Features Area CSS
+    =================================================*/
+  .features-card {
+    padding: 20px 15px;
+  }
+  /*================================================
+    Index 01 About Area CSS
+    =================================================*/
+  .about-text-area {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+  .about-img-area {
+    background-image: unset;
+    height: auto;
+  }
+  .about-img-area img {
+    display: block;
+  }
+  .about-img-area .about-img-text {
+    top: 0;
+    left: 8%;
+    padding: 20px;
+  }
+  .about-img-area .about-img-text i {
+    font-size: 40px;
+  }
+  .about-img-area .about-img-text h4 {
+    font-size: 30px;
+  }
+  .about-img-area .about-img-text p {
+    font-size: 13px;
+  }
+  /*================================================
+    Index 01 Services Area CSS
+    =================================================*/
+  .service-card .service-card-text-area {
+    padding: 20px 15px;
+  }
+  /*================================================
+    Index 01 Working Process Area CSS
+    =================================================*/
+  .working-process-1::before {
+    display: none;
+  }
+  .working-process-card {
+    border: 1px solid #eeeeee;
+    padding: 20px 15px;
+  }
+  .working-process-card .dot {
+    display: none;
+  }
+  /*================================================
+    Index 01 Fun Fact & Video Area CSS
+    =================================================*/
+  .intro-video-text-area, .intro-video-play-area {
+    text-align: center;
+  }
+  .fun-fact-area {
+    padding: 15px;
+  }
+  .fun-fact-card {
+    padding: 15px 10px;
+    text-align: center;
+  }
+  .fun-fact-card h2 {
+    font-size: 44px;
+  }
+  .fun-fact-card p {
+    font-size: 11px;
+  }
+  /*================================================
+    Index 01 Pricing Area CSS
+    =================================================*/
+  .pricing-card {
+    padding: 20px 15px;
+  }
+  /*================================================
+    Index 01 Team Area CSS
+    =================================================*/
+  .team-card .team-card-text {
+    padding: 20px 15px;
+  }
+  /*================================================
+    Index 01 Sign Up Area CSS
+    =================================================*/
+  .sign-up-form-area {
+    padding: 20px 15px 25px;
+  }
+  .sign-up-form-area .form-check label {
+    font-size: 14px;
+  }
+  /*================================================
+    Index 01 Testimonials Area CSS
+    =================================================*/
+  .testimonial-card {
+    padding: 20px 15px;
+  }
+  .testimonial-card p {
+    font-size: 14px;
+  }
+  /*================================================
+    Index 01 Blog Area CSS
+    =================================================*/
+  .blog-card .blog-card-text {
+    padding: 20px 15px;
+  }
+  /*================================================
+    Index 01 Newsletter Area CSS
+    =================================================*/
+  .newsletter .newsletter-text-area h3 {
+    font-size: 30px;
+  }
+  /*================================================
+    Index 01 Footer Area CSS
+    =================================================*/
+  .footer-logo-area p {
+    font-size: 14px;
+  }
+  .footer-links {
+    margin-top: 30px;
+    padding: 0;
+  }
+  .footer-links h3 {
+    margin-bottom: 10px;
+  }
+  .footer-contact-card i {
+    top: 0;
+    -webkit-transform: translateY(0) !important;
+            transform: translateY(0) !important;
+  }
+  .progress-wrap {
+    right: 15px;
+  }
+  /*================================================
+    Index 02 Banner Area CSS
+    =================================================*/
+  .home-banner-single-slide {
+    padding-top: 60px;
+    padding-bottom: 120px;
+  }
+  .home-banner-single-slide .banner-text-area {
+    padding: 0;
+  }
+  .home-banner-single-slide::before {
+    background-image: unset;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .home-banner .shape {
+    display: none;
+  }
+  .home-banner-slider-area .owl-dots {
+    right: unset;
+    left: 50%;
+    bottom: 25px;
+    top: unset;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .home-banner-slider-area .owl-dots .owl-dot {
+    display: inline-block;
+    margin: 0px 5px;
+  }
+  /*================================================
+    Index 02 Features Area CSS
+    =================================================*/
+  .features-card-2 {
+    padding: 20px 15px;
+  }
+  /*================================================
+    Index 02 About Area CSS
+    =================================================*/
+  .about-text-area-2 {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+  /*================================================
+    Index 02 Service Area CSS
+    =================================================*/
+  .service-card-2 .service-card-text-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  /*================================================
+    Index 02 Working Process Area CSS
+    =================================================*/
+  .working-process-card-2 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .working-process-card-2 .working-process-title-2 img {
+    margin-right: 15px;
+  }
+  .working-process-card-2 .working-process-title-2 h4 {
+    font-size: 19px;
+  }
+  /*================================================
+    Index 02 Team Area CSS
+    =================================================*/
+  .team-card-2 .team-card-text-2 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /*================================================
+    Index 02 Blog Area CSS
+    =================================================*/
+  .blog-card-2 .blog-card-text {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  /*================================================
+    Index 03 banner Area CSS
+    =================================================*/
+  .banner-3-image-area-single-slider {
+    background-image: unset;
+    height: auto;
+  }
+  .banner-3-image-area-single-slider img {
+    display: block;
+  }
+  .banner-img-area-3 .video-popup {
+    left: 50%;
+    top: 50%;
+    bottom: unset;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .banner-text-area-3 {
+    margin-left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /*================================================
+    Index 03 Features Area CSS
+    =================================================*/
+  .features-card-3 .features-card-text-area {
+    padding: 20px 15px;
+  }
+  /*================================================
+    Index 03 About Area CSS
+    =================================================*/
+  .about-text-area-3 {
+    margin-top: 30px;
+  }
+  /*================================================
+    Index 03 Services Area CSS
+    =================================================*/
+  .service-card-3 .service-card-text-3 {
+    padding: 20px 15px;
+    max-width: 90%;
+  }
+  /*================================================
+    Index 03 Team Area CSS
+    =================================================*/
+  .team-card-3 .team-card-3-img::before {
+    height: 100%;
+  }
+  .team-card-3 .team-card-3-img .social-icons {
+    opacity: 1;
+    bottom: 20%;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  /*================================================
+    Index 03 Section Bottom Line Area CSS
+    =================================================*/
+  .section-bottom-text::before, .section-bottom-text::after {
+    width: 0%;
+  }
+  /*================================================
+    Index 03 Working Process Area CSS
+    =================================================*/
+  .working-process-card-3 {
+    padding: 20px 15px;
+  }
+  /*================================================
+    Index 03 Testimonials Area CSS
+    =================================================*/
+  .testimonial-card-3 {
+    padding: 20px 15px;
+  }
+  .testimonial-card-3 p {
+    font-size: 14px;
+  }
+  .testimonial-card-3 i {
+    font-size: 30px;
+  }
+  /*================================================
+    Index 03 Blog Area CSS
+    =================================================*/
+  .blog-card-3 .blog-card-text h4 {
+    font-size: 20px;
+  }
+  /*================================================
+    Uni Banner Area CSS
+    =================================================*/
+  .uni-banner {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .uni-banner-text-area h1 {
+    font-size: 40px;
+  }
+  /*================================================
+    Details Page Area CSS
+    =================================================*/
+  .details-page-text-area h3 {
+    font-size: 28px;
+  }
+  .details-page-text-area h4 {
+    font-size: 22px;
+  }
+  /*================================================
+    Details Page Sidebar Area CSS
+    =================================================*/
+  .sidebar-card {
+    padding: 20px 15px 25px;
+  }
+  .sidebar-card h3 {
+    font-size: 24px;
+  }
+  .sidebar-tag ul li a {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 5px;
+  }
+  .sidebar-download .default-button {
+    padding: 5px 15px 7px;
+  }
+  /*================================================
+    Error Page Area CSS
+    =================================================*/
+  .error-content h4 {
+    font-size: 24px;
+  }
+  /*================================================
+    Faq Area CSS
+    =================================================*/
+  .accordion-button {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .accordion-item {
+    padding: 0px 15px;
+  }
+  .accordion-item .accordion-body {
+    padding-bottom: 15px;
+  }
+  .faq-contact .section-content {
+    margin-top: 30px;
+  }
+  .faq-contact-img-area {
+    background-image: unset;
+    height: auto;
+  }
+  .faq-contact-img-area img {
+    display: block;
+  }
+  .faq-contact-form {
+    padding: 20px 15px;
+    margin-top: 30px;
+margin-right: 0;
+    margin-bottom: 0;
+  }
+  /*================================================
+    Blog Area CSS
+    =================================================*/
+  .bd-form, .bd-comments {
+    padding: 20px 15px;
+  }
+  .comment-card {
+    padding: 0;
+  }
+  .comment-card img {
+    margin-bottom: 15px;
+    position: relative;
+    left: 0;
+  }
+  .bd-form .form-check label {
+    font-size: 12px;
+  }
+  /*================================================
+    Index 02 Products Area CSS
+    =================================================*/
+  .ppt-left-side {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .product-page-topbar .ppt-right-area {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  /*================================================
+    Products Area CSS
+    =================================================*/
+  .product-info-image-area {
+    background-image: unset;
+    height: auto;
+  }
+  .product-info-image-area img {
+    display: block;
+    width: 100%;
+  }
+  .product-details-info-area {
+    padding-top: 30px;
+    padding-bottom: 0px;
+  }
+  .product-description-area .tab-content {
+    padding: 15px;
+  }
+  /*================================================
+    Shopping Cart page CSS
+    =================================================*/
+  .cart-table-area .table {
+    width: 720px;
+    overflow-x: scroll;
+  }
+  .cart-footer-area .dfb {
+    margin-right: auto;
+  }
+  .total-cart-box {
+    padding: 20px 15px;
+  }
+  /*================================================
+    CheckOut page CSS
+    =================================================*/
+  .checkout-user {
+    padding: 15px 13px;
+  }
+  .payment-box {
+    padding: 20px 15px;
+  }
+  /*================================================
+    Contact page CSS
+    =================================================*/
+  .contact-form-text-area, .customer-support-area {
+    padding: 20px 15px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  /*================================================
+    Testimonials Area CSS
+    =================================================*/
+  .menu-small-device .default-button {
+    display: block;
+  }
+  /*================================================
+    Index 01 banner Area CSS
+    =================================================*/
+  .banner-text-area h1 {
+    font-size: 56px;
+  }
+  .banner-text-area p {
+    font-size: 15px;
+  }
+  /*================================================
+    Index 01 Testimonials Area CSS
+    =================================================*/
+  .testimonial-card p {
+    font-size: 15px;
+  }
+  /*================================================
+    Index 01 Services Area CSS
+    =================================================*/
+  .footer-services {
+    margin-top: 0;
+  }
+  /*================================================
+    Index 03 Section Bottom Line Area CSS
+    =================================================*/
+  .section-bottom-text::before, .section-bottom-text::after {
+    width: 20%;
+  }
+  /*================================================
+    Index 02 Pricing Area CSS
+    =================================================*/
+  .pricing-card-2 ul li {
+    font-size: 12px;
+  }
+  .pricing-card-2 ul li i {
+    margin-right: 5px;
+  }
+  /*================================================
+    Index 02 Products Area CSS
+    =================================================*/
+  .ppt-left-side {
+    text-align: unset;
+    margin-bottom: 0;
+  }
+  .product-page-topbar .ppt-right-area {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /*================================================
+    Default Area CSS
+    =================================================*/
+  .ptb-100 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .pt-100 {
+    padding-top: 80px;
+  }
+  .pb-100 {
+    padding-bottom: 80px;
+  }
+  .ptb-70 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .pt-70 {
+    padding-top: 50px;
+  }
+  .pb-70 {
+    padding-bottom: 50px;
+  }
+  .pt-50 {
+    padding-top: 20px;
+  }
+  .pt-30 {
+    margin-top: 30px;
+  }
+  .pl-20 {
+    padding-left: 0px;
+  }
+  .pr-20 {
+    padding-right: 0px;
+  }
+  :root {
+    --card-title-fontSize: 22px;
+    --fontSize: 14px;
+  }
+  .default-section-title h3 {
+    font-size: 32px;
+  }
+  .section-content {
+    margin-top: 0px;
+  }
+  .section-title .default-button {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .container-large {
+    max-width: 720px;
+  }
+  /*================================================
+    Topbar Area CSS
+    =================================================*/
+  .topbar-left-area ul li {
+    padding-left: 0;
+    font-size: 13px;
+  }
+  .topbar-left-area ul li a {
+    margin-right: 0;
+  }
+  /*================================================
+    Navigation Area CSS
+    =================================================*/
+  .menu-small-device {
+    right: 60px;
+  }
+  /*================================================
+    Index 01 Banner Area CSS
+    =================================================*/
+  .banner-text-area {
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+  /*================================================
+    Index 01 About Area CSS
+    =================================================*/
+  .about-text-area {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+  .about-img-area {
+    background-image: unset;
+    height: auto;
+  }
+  .about-img-area img {
+    display: block;
+  }
+  .about-img-area .about-img-text {
+    top: 0;
+  }
+  /*================================================
+    Index 01 Working Process Area CSS
+    =================================================*/
+  .working-process-1::before {
+    display: none;
+  }
+  .working-process-card {
+    border: 1px solid #eeeeee;
+    padding: 20px 15px;
+  }
+  .working-process-card .dot {
+    display: none;
+  }
+  /*================================================
+    Index 01 Intro Video Area CSS
+    =================================================*/
+  .intro-video-play-area {
+    margin-top: 0;
+  }
+  /*================================================
+    Index 01 sign Up Area CSS
+    =================================================*/
+  .sign-up-form-area {
+    padding: 30px 30px 40px;
+  }
+  /*================================================
+    Index 01 Testimonials Area CSS
+    =================================================*/
+  .testimonial-card {
+    padding: 20px 15px;
+  }
+  /*================================================
+    Index 01 Blog Area CSS
+    =================================================*/
+  .blog-card .blog-card-text {
+    padding: 20px 15px;
+  }
+  /*================================================
+    Index 01 Foote Area CSS
+    =================================================*/
+  .footer-links {
+    margin-top: 30px;
+    padding: 0;
+  }
+  .footer-links h3 {
+    margin-bottom: 10px;
+  }
+  .footer-services {
+    margin-top: 0;
+  }
+  /*================================================
+    Index 02 Banner Area CSS
+    =================================================*/
+  .home-banner-single-slide {
+    padding-top: 80px;
+    padding-bottom: 150px;
+  }
+  .home-banner-single-slide .banner-text-area {
+    padding: 0;
+  }
+  .home-banner-single-slide::before {
+    background-image: unset;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .home-banner .shape {
+    display: none;
+  }
+  .home-banner-slider-area .owl-dots {
+    right: unset;
+    left: 50%;
+    bottom: 25px;
+    top: unset;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .home-banner-slider-area .owl-dots .owl-dot {
+    display: inline-block;
+    margin: 0px 5px;
+  }
+  /*================================================
+    Index 02 Features Area CSS
+    =================================================*/
+  .features-card-2 {
+    padding: 20px 15px;
+  }
+  /*================================================
+    Index 02 About Area CSS
+    =================================================*/
+  .about-text-area-2 {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+  /*================================================
+    Index 02 Working Process Area CSS
+    =================================================*/
+  .working-process-card-2 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .working-process-card-2 .working-process-title-2 img {
+    margin-right: 15px;
+  }
+  .working-process-card-2 .working-process-title-2 h4 {
+    font-size: 19px;
+  }
+  /*================================================
+    Index 02 Blog Area CSS
+    =================================================*/
+  .blog-card-2 .blog-card-text {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  /*================================================
+    Index 03 Banner Area CSS
+    =================================================*/
+  .banner-3-image-area-single-slider {
+    background-image: unset;
+    height: auto;
+  }
+  .banner-3-image-area-single-slider img {
+    display: block;
+  }
+  .banner-img-area-3 .video-popup {
+    left: 50%;
+    top: 50%;
+    bottom: unset;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .banner-text-area-3 {
+    margin-left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /*================================================
+    Index 03 Features Area CSS
+    =================================================*/
+  .features-card-3 .features-card-text-area {
+    padding: 20px 15px;
+  }
+  /*================================================
+    Index 03 About Area CSS
+    =================================================*/
+  .about-text-area-3 {
+    margin-top: 30px;
+  }
+  /*================================================
+    Index 03 Services Area CSS
+    =================================================*/
+  .service-card-3 .service-card-text-3 {
+    padding: 20px 15px;
+    max-width: 90%;
+  }
+  /*================================================
+    Index 03 Section Bottom Line Area CSS
+    =================================================*/
+  .section-bottom-text::before, .section-bottom-text::after {
+    width: 30%;
+  }
+  /*================================================
+    Index 03 Working Process Area CSS
+    =================================================*/
+  .working-process-card-3 {
+    padding: 20px 15px;
+  }
+  /*================================================
+    Index 03 Testimonials Area CSS
+    =================================================*/
+  .testimonial-card-3 {
+    padding: 20px 15px;
+  }
+  .testimonial-card-3 p {
+    font-size: 15px;
+  }
+  /*================================================
+    Index 03 Blog Area CSS
+    =================================================*/
+  .blog-card-3 .blog-card-text h4 {
+    font-size: 20px;
+  }
+  /*================================================
+    Uni Banner Area CSS
+    =================================================*/
+  .uni-banner {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  /*================================================
+    Faq Area CSS
+    =================================================*/
+  .accordion-button {
+    font-size: 18px;
+  }
+  .faq-contact .section-content {
+    margin-top: 30px;
+  }
+  .faq-contact-img-area {
+    background-image: unset;
+    height: auto;
+  }
+  .faq-contact-img-area img {
+    display: block;
+  }
+  .faq-contact-form {
+    margin-top: 30px;
+margin-right: 0;
+    margin-bottom: 0;
+  }
+  /*================================================
+    Products Area CSS
+    =================================================*/
+  .product-info-image-area {
+    background-image: unset;
+    height: auto;
+  }
+  .product-info-image-area img {
+    display: block;
+    width: 100%;
+  }
+  .product-details-info-area {
+    padding-top: 30px;
+    padding-bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /*================================================
+    Default Area CSS
+    =================================================*/
+  :root {
+    --card-title-fontSize: 22px;
+    --fontSize: 14px;
+  }
+  .default-section-title h3 {
+    font-size: 30px;
+  }
+  /*================================================
+    Navigation Bar Area CSS
+    =================================================*/
+  .main-nav nav .navbar-nav .nav-item a {
+    font-size: 14px;
+  }
+  .menu-sidebar ul li .default-button {
+    font-size: 13px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /*================================================
+    Index 01 Banner Area CSS
+    =================================================*/
+  .banner-text-area h1 {
+    font-size: 56px;
+  }
+  /*================================================
+    Index 01 Service Area CSS
+    =================================================*/
+  .service-card .service-card-text-area {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /*================================================
+    Index 01 Working Process Area CSS
+    =================================================*/
+  .working-process-1::before {
+    top: 57%;
+  }
+  /*================================================
+    Index 01 Fun Facts Area CSS
+    =================================================*/
+  .fun-fact-card, .pricing-card {
+    padding: 20px 15px;
+  }
+  /*================================================
+    Index 01 Sign Up Area CSS
+    =================================================*/
+  .sign-up-form-area {
+    padding: 30px 30px 40px;
+  }
+  /*================================================
+    Index 01 Blog Area CSS
+    =================================================*/
+  .blog-card .blog-card-text {
+    padding: 20px 15px;
+  }
+  /*================================================
+    Index 01 Newsletter Area CSS
+    =================================================*/
+  .newsletter .newsletter-text-area h3 {
+    font-size: 36px;
+  }
+  /*================================================
+    Footer Area CSS
+    =================================================*/
+  .footer-logo-area p {
+    font-size: 13px;
+  }
+  .footer-links ul li {
+    font-size: 13px;
+    margin-top: 20px;
+  }
+  .footer-contact-card {
+    margin-top: 15px;
+  }
+  .footer-contact-card p {
+    font-size: 13px;
+  }
+  /*================================================
+    Index 02 Banner Area CSS
+    =================================================*/
+  .home-banner-single-slide {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  /*================================================
+    Index 02 Working Process Area CSS
+    =================================================*/
+  .working-process-card-2 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .working-process-card-2 .working-process-title-2 img {
+    margin-right: 15px;
+  }
+  .working-process-card-2 .working-process-title-2 h4 {
+    font-size: 19px;
+  }
+  /*================================================
+    Index 02 Blog Area CSS
+    =================================================*/
+  .blog-card-2 .blog-card-text {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  /*================================================
+    Index 03 Services Area CSS
+    =================================================*/
+  .service-card-3 .service-card-text-3 {
+    padding: 20px 15px;
+    max-width: 90%;
+  }
+  /*================================================
+    Index 03 Section Bottom Line Area CSS
+    =================================================*/
+  .section-bottom-text::before, .section-bottom-text::after {
+    width: 30%;
+  }
+  /*================================================
+    Index 03 Working Process Area CSS
+    =================================================*/
+  .working-process-card-3 {
+    padding: 20px 15px;
+  }
+  /*================================================
+    Index 03 Blog Area CSS
+    =================================================*/
+  .blog-card-3 .blog-card-text h4 {
+    font-size: 20px;
+  }
+  /*================================================
+    Sidebar Area CSS
+    =================================================*/
+  .sidebar-card {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .sidebar-download .default-button {
+    padding: 13px 15px;
+  }
+  .sidebar-tag ul li a {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 5px;
+  }
+  /*================================================
+    Faq Area CSS
+    =================================================*/
+  .accordion-button {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  :root {
+    --card-title-fontSize: 20px;
+    --fontSize: 14px;
+  }
+  .default-section-title h3 {
+    font-size: 30px;
+  }
+  /*================================================
+    Index 01 Banner Area CSS
+    =================================================*/
+  .banner-text-area h1 {
+    font-size: 64px;
+  }
+  /*================================================
+    Index 01 Working Process Area CSS
+    =================================================*/
+  .working-process-1::before {
+    top: 60%;
+  }
+  /*================================================
+    Index 02 Banner Area CSS
+    =================================================*/
+  .home-banner-single-slide {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  /*================================================
+    Index 03 Section Bottom Text Area CSS
+    =================================================*/
+  .section-bottom-text::before, .section-bottom-text::after {
+    width: 35%;
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  .container-large {
+    max-width: 1640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*================================================
+    Index 01 Banner Area CSS
+    =================================================*/
+  .banner-text-area h1 {
+    font-size: 90px;
+  }
+  .home-banner .shape1 {
+    z-index: 2;
+  }
+  /*================================================
+    Index 03 Section Bottom Text Area CSS
+    =================================================*/
+  .section-bottom-text::before, .section-bottom-text::after {
+    width: 40%;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

@@ -1,0 +1,123 @@
+﻿<div class="page-body">
+    <div class="container-fluid">
+        <div class="page-title">
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <h3>اعتبار سنجی فرم</h3>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/"> <i data-feather="home"></i></a></li>
+                        <li class="breadcrumb-item"> کنترل های فرم</li>
+                        <li class="breadcrumb-item active"> اعتبار سنجی فرم</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Container-fluid starts-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header pb-0">
+                        <h5>ثبت محصول</h5><span>
+
+                        </span><span>
+
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" novalidate="">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">نام محصول</label>
+                                    <input class="form-control" name="productname" type="text" required="">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">تصویر محصول</label>
+                                    <input class="form-control" name="Images" type="file" aria-label="file example" required="">                                    <div class="valid-feedback">خوب به نظر میرسه!</div>
+                                </div>
+
+                            </div>
+                            <br />
+                            <div class="row g-3">
+                                <div class="col-md-12">
+                                    <div>
+                                        <label class="form-label">توضیحات محصول</label>
+                                        <textarea class="form-control" name="productdescription" required rows="2"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row g-3">
+                                <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                    <fieldset class="form-group">
+                                        <label class="form-label">ویژگی</label>
+                                        @* <input type="text" class="form-control" id="txtDisplayName" placeholder="نام ویژگی" /> *@
+                                        <select asp-items="@ViewBag.Attribute" class="form-select" id="txtDisplayName">
+                                            <option value="">انتخاب ...</option>
+                                        </select>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-xl-2 col-lg-6 col-md-12 mb-1">
+                                    <fieldset class="form-group">
+                                        <label for="basicInput"> مقدار ویژگی </label>
+                                        <input type="text" class="form-control" id="txtValue" placeholder="مقدار ویژگی" />
+                                    </fieldset>
+                                </div>
+                                <div class="col-xl-2 col-lg-6 col-md-12 mb-1">
+                                    <fieldset class="form-group">
+                                        <br />
+                                        <a class="btn btn-success" id="btnAddFeatures">افزودن</a>
+                                    </fieldset>
+                                </div>
+                                <br class="clear" />
+
+                                <table id="tbl_Features" class="col-md-12 table table-bordered table-hover  table-condensed table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                نام ویژگی
+                                            </th>
+                                            <th>
+                                                مقدار ویژگی
+                                            </th>
+                                            <th>
+
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+
+                            </div>
+
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    
+                                    <div class="invalid-feedback"></div>
+                                </div>
+                            </div>
+                            <button id="btnAddProduct" class="btn btn-primary" type="submit">افزودن</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Container-fluid Ends-->
+</div>
+<link href="~/lib/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+
+
+@section Scripts{
+    <script src="~/admin/assets/js/form-validation-custom.js"></script>
+    <script src="~/lib/sweetalert2/sweetalert2.min.js"></script>
+
+    <script src="~/lib/core/popper.min.js"></script>
+    <script src="~/ajaxjs/customjs.js"></script>
+
+}

@@ -1,0 +1,98 @@
+﻿<div>
+    <div class="logo-wrapper">
+        <a href="/">
+            <img style="height:50px;border-radius:5px;" class="img-fluid for-light"
+                 src="~/assets/images/tarinpood-logo.jpg" alt=""><img class="img-fluid for-dark"
+                                                            src="~/assets/images/tarinpood-logo.jpg" alt="">
+        </a>
+        <div class="back-btn"><i class="fa fa-angle-right"></i></div>
+    </div>
+    <div class="logo-icon-wrapper">
+        <a href="/">
+            <img style="height :50px;border-radius:5px;" class="img-fluid"
+                 src="~/assets/images/tarinpood-logo.jpg" alt="">
+        </a>
+    </div>
+    <nav class="sidebar-main">
+        <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
+        <div id="sidebar-menu">
+            <ul class="sidebar-links" id="simple-bar">
+                <li class="back-btn">
+                    <a href="/">
+                        <img class="img-fluid" src=""
+                             alt="">
+                    </a>
+                    <div class="mobile-back text-end">
+                        <span>بازگشت</span><i class="fa fa-angle-left ps-2"
+                                              aria-hidden="true"> </i>
+                    </div>
+                </li>
+
+                <li class="sidebar-list">
+                    <a class="sidebar-link sidebar-title link-nav" asp-area="admin" asp-controller="Home" asp-action="Index">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <g>
+                                    <path d="M9.07861 16.1355H14.8936" stroke="#130F26" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M2.3999 13.713C2.3999 8.082 3.0139 8.475 6.3189 5.41C7.7649 4.246 10.0149 2 11.9579 2C13.8999 2 16.1949 4.235 17.6539 5.41C20.9589 8.475 21.5719 8.082 21.5719 13.713C21.5719 22 19.6129 22 11.9859 22C4.3589 22 2.3999 22 2.3999 13.713Z"
+                                          stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </g>
+                        </svg><span >صفحه اصلی</span>
+                        <div class="according-menu"><i class="fa fa-angle-left"></i></div>
+                    </a>
+                </li>
+                <li class="sidebar-list">
+                    <a class="sidebar-link sidebar-title" href="#">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <g>
+                                    <path d="M15.7499 9.47167V6.43967C15.7549 4.35167 14.0659 2.65467 11.9779 2.64967C9.88887 2.64567 8.19287 4.33467 8.18787 6.42267V9.47167" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.94995 14.2074C2.94995 8.91344 5.20495 7.14844 11.969 7.14844C18.733 7.14844 20.988 8.91344 20.988 14.2074C20.988 19.5004 18.733 21.2654 11.969 21.2654C5.20495 21.2654 2.94995 19.5004 2.94995 14.2074Z" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </g>
+                        </svg><span>محصولات</span>
+                        <div class="according-menu"><i class="fa fa-angle-left"></i></div>
+                    </a>
+                    <ul class="sidebar-submenu" style="display: none;">
+                        <li><a asp-area="Admin" asp-controller="Product" asp-action="AddNewProduct" asp-route-id="0">افزودن محصول جدید</a></li>
+                        <li><a asp-area="Admin" asp-controller="Product" asp-action="Index" >لیست محصولات</a></li>
+                        <li><a asp-area="Admin" asp-controller="Product" asp-action="Attributes">ویژگی های محصول</a></li>
+
+                    </ul>
+                </li>
+                <li class="sidebar-list">
+                    <a asp-area="Admin" asp-controller="Slider" asp-action="index" class="sidebar-link sidebar-title link-nav">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-server"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6" y2="6"></line><line x1="6" y1="18" x2="6" y2="18"></line></svg>                        <span>تصاویر اسلایدر</span>
+                    </a>
+                </li>
+                <li class="sidebar-list">
+                    <a asp-area="Admin" asp-controller="User" asp-action="index" class="sidebar-link sidebar-title link-nav">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <g>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.55851 21.4562C5.88651 21.4562 2.74951 20.9012 2.74951 18.6772C2.74951 16.4532 5.86651 14.4492 9.55851 14.4492C13.2305 14.4492 16.3665 16.4342 16.3665 18.6572C16.3665 20.8802 13.2505 21.4562 9.55851 21.4562Z" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.55849 11.2776C11.9685 11.2776 13.9225 9.32356 13.9225 6.91356C13.9225 4.50356 11.9685 2.54956 9.55849 2.54956C7.14849 2.54956 5.19449 4.50356 5.19449 6.91356C5.18549 9.31556 7.12649 11.2696 9.52749 11.2776H9.55849Z" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M16.8013 10.0789C18.2043 9.70388 19.2383 8.42488 19.2383 6.90288C19.2393 5.31488 18.1123 3.98888 16.6143 3.68188" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M17.4608 13.6536C19.4488 13.6536 21.1468 15.0016 21.1468 16.2046C21.1468 16.9136 20.5618 17.6416 19.6718 17.8506" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                            </g>
+                        </svg>
+                        <span>مدیران سایت</span>
+                    </a>
+                </li>
+                <li class="sidebar-list">
+                    <a href="/Authentication/SignOut" class="sidebar-link sidebar-title link-nav">
+                        <i data-feather="log-out"></i>
+                        <span>خروج از حساب کاربری</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
+    </nav>
+</div>
+

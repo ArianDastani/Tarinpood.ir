@@ -1,0 +1,11 @@
+C:\Users\DH\Desktop\GitTarinpood\TarinPood\Infrastructure\bin\Debug\net6.0\Infrastructure.deps.json
+C:\Users\DH\Desktop\GitTarinpood\TarinPood\Infrastructure\bin\Debug\net6.0\Infrastructure.dll
+C:\Users\DH\Desktop\GitTarinpood\TarinPood\Infrastructure\bin\Debug\net6.0\Infrastructure.pdb
+C:\Users\DH\Desktop\GitTarinpood\TarinPood\Infrastructure\obj\Debug\net6.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DH\Desktop\GitTarinpood\TarinPood\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\DH\Desktop\GitTarinpood\TarinPood\Infrastructure\obj\Debug\net6.0\Infrastructure.AssemblyInfo.cs
+C:\Users\DH\Desktop\GitTarinpood\TarinPood\Infrastructure\obj\Debug\net6.0\Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\DH\Desktop\GitTarinpood\TarinPood\Infrastructure\obj\Debug\net6.0\Infrastructure.dll
+C:\Users\DH\Desktop\GitTarinpood\TarinPood\Infrastructure\obj\Debug\net6.0\refint\Infrastructure.dll
+C:\Users\DH\Desktop\GitTarinpood\TarinPood\Infrastructure\obj\Debug\net6.0\Infrastructure.pdb
+C:\Users\DH\Desktop\GitTarinpood\TarinPood\Infrastructure\obj\Debug\net6.0\ref\Infrastructure.dll

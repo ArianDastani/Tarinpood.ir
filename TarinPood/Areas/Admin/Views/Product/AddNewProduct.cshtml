@@ -1,0 +1,166 @@
+﻿
+@model Application.Services.Product.Command.AddProduct.EditProductDto;
+@{
+    ViewData["Title"] = "AddNewProduct";
+    bool IsCreate = Model.ProductId == 0 ? true : false;
+}
+
+<div class="page-body">
+    <div class="container-fluid">
+        <div class="page-title">
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <h3>اعتبار سنجی فرم</h3>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/"> <i data-feather="home"></i></a></li>
+                        <li class="breadcrumb-item"> کنترل های فرم</li>
+                        <li class="breadcrumb-item active"> اعتبار سنجی فرم</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title-wrap bar-success">
+                        <h4 class="card-title mb-0">اطلاعات محصول جدید را وارد نمایید</h4>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="px-3">
+                        <form novalidate method="post">
+                            <input id="Id" type="hidden" asp-for="ProductId" />
+
+                            <div class="form">
+                                <div class="form-body">
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-6 col-md-12 mb-1">
+                                            <fieldset class="form-group">
+                                                <label for="basicInput">نام محصول </label>
+                                                <input type="text" asp-for="Name" class="form-control" id="Name" required>
+                                            </fieldset>
+                                        </div>
+
+                                        <div class="col-xl-6 col-lg-6 col-md-12 mb-1">
+                                            <fieldset class="form-group">
+                                                <label for="basicInput">تصاویر </label>
+                                                <input type="file" class="form-control" accept="image/*" name="imageproduct" id="imageproduct">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 mb-1">
+                                            <fieldset class="form-group">
+                                                <label for="basicInput"> توضیحات</label>
+                                                <textarea asp-for="Description" id="Description" class="form-control " rows="5"></textarea>
+                                            </fieldset>
+                                            <br />
+
+                                            <br />
+                                        </div>
+
+                                        <br />
+
+                                        <br />
+                                        <br />
+
+                                        @if (IsCreate == true)
+                                        {
+
+                                            <div class="col-xl-2 col-lg-6 col-md-12 mb-1">
+                                                <fieldset class="form-group">
+                                                    <label for="basicInput"> نام ویژگی </label>
+                                                    @* <input type="text" class="form-control" id="txtDisplayName" placeholder="نام ویژگی" /> *@
+                                                    <select class="form-control" id="txtDisplayName" asp-items="@ViewBag.Attribute"></select>
+
+                                                </fieldset>
+                                            </div>
+
+                                            <div class="col-xl-2 col-lg-6 col-md-12 mb-1">
+                                                <fieldset class="form-group">
+                                                    <label for="basicInput"> مقدار ویژگی </label>
+                                                    <input type="text" class="form-control" id="txtValue" placeholder="مقدار ویژگی" />
+                                                </fieldset>
+                                            </div>
+                                            <div class="col-xl-2 col-lg-6 col-md-12 mb-1">
+                                                <fieldset class="form-group">
+                                                    <br />
+                                                    <a class="btn btn-success" id="btnAddFeatures">افزودن</a>
+                                                </fieldset>
+                                            </div>
+
+
+
+                                            <br class="clear" />
+
+                                            <table id="tbl_Features" class="col-md-12 table table-bordered table-hover  table-condensed table-responsive">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            نام ویژگی
+                                                        </th>
+                                                        <th>
+                                                            مقدار ویژگی
+                                                        </th>
+                                                        <th>
+
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    @if (IsCreate == false)
+                                                    {
+                                                        @foreach (var item in Model.ProductFeatures)
+                                                        {
+                                                            <tr> <td>@item.Value</td>  <td>@item.DisplayName</td> <td> <a class="idFeatures btnDelete btn btn-danger"> حذف </a> </td> </tr>
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+
+                                                    }
+
+                                                </tbody>
+                                            </table>
+                                        }
+
+
+
+
+
+
+                                        <div class="col-xl-12 col-lg-12 col-md-12 mb-1">
+                                            <fieldset class="form-group">
+                                                <br />
+                                                <a id="btnAddProduct" class="btn btn-success col-md-12"> افزودن محصول  </a>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href="~/lib/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+
+@section Scripts
+    {
+
+    <script src="~/lib/sweetalert2/sweetalert2.min.js"></script>
+
+    <script src="~/ajaxjs/customjs.js"></script>
+
+
+}
+

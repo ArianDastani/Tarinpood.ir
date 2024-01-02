@@ -1,0 +1,223 @@
+﻿@{
+    ViewData["Title"] = "خانه";
+}
+@model IndexViewModel
+
+
+
+<div class="home-banner">
+    <div class="shape">
+    </div>
+    <div class="home-banner-slider-area owl-carousel">
+        @if (Model.SliderIndex.Count > 0 || Model.SliderIndex != null)
+        {
+            @foreach (var item in Model.SliderIndex)
+            {
+                <div style="background-image: url('/content/ImageSlider/@item.SliderPicture')" class="home-banner-single-slide">
+                    <div class="container-fluid container-large">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="banner-text-area banner-text-area-1">
+                                    <h6>پارچه تارین پود</h6>
+                                    <h2>@item.SliderH2Content</h2>
+                                    <h5>@item.SliderH5Content</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        }
+
+    </div>
+</div>
+
+
+
+<div class="about pb-100" style="margin-top : 50px; padding-bottom : 30px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-text-area pr-20">
+                    <div class="default-section-title">
+                        <span>درباره ما</span>
+                        <h3>نساجی تارین پود</h3>
+                        <h5 style="text-align:justify;">
+                            مجموعه تارین پود در سال ۱۳۸۵ با استفاده از دستگاه های مجهز و با تکنولوژی روز دنیا با توانایی دریافت و تکمیل انواع پارچه توانسته است حضور خود را جهت تامین پارچه های <b>بیمارستانی</b> ، <b>اداری</b> ، <b>فرم</b> ، <b>صنعتی</b> ، <b>کارگاهی</b> و <b>مدارس</b> اعلام نماید.
+                        </h5>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <a class="default-button default-button-2 mt-30" href="/about"><span>بیشتر بدانید <i class="flaticon-left-arrow-1"></i></span></a>
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="~/assets/images/logo-farsi.jpg" style="width:250px;height:70px;margin:30px 2px 0 20px;border-radius:5px;"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div style="height:92%;" class="about-img-area">
+                    <img src="~/assets/images/about/about-1.jpg" alt="تارین پود">
+                    <div class="about-img-text">
+                        <i class="flaticon-badge"></i>
+                        <h4>17 سال</h4>
+                        <p>تجربه کاری</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="features pt-70 pb-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="features-card">
+                    <img src="~/assets/images/icons/secure-shield.png" alt="تارین پود">
+                    <h4>قابل اعتماد</h4>
+                    <p>می توانید سفارشات خود را با خیال آسوده به ما بسپارید و از خروجی کار آسوده خاطر باشید.</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="features-card">
+                    <img src="~/assets/images/icons/certificate.png" alt="تارین پود">
+                    <h4>تضمین کیفیت</h4>
+                    <p>ما به شما تضمین می دهیم کالایی که در اختیارتان قرار می گیرد کاملا با کیفیت و با توجه به نیاز های شما خواهد بود.</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="features-card">
+                    <img src="~/assets/images/icons/telephone.png" alt="تارین پود">
+                    <h4>ثبت سفارش آسان</h4>
+                    <p>از طریق راه های ارتباطی قرار داده شده در سایت به آسانی با ما در تماس باشید و سفارش خود را ثبت و پیگیری کنید.</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                <div class="features-card">
+                    <img src="~/assets/images/icons/star.png" alt="تارین پود">
+                    <h4>سال ها تجربه</h4>
+                    <p> ما با 17 سال تجربه کاری در حوزه پارچه همواره تلاش کرده ایم تا بهترین کیفیت را ارائه کرده و رضایت مشتریان را کسب کنیم.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="ff-intro ff-intro-1">
+    <div class="container">
+        <div class="ptb-100">
+            <div class="row align-items-center" style="text-align: center;">
+                <h2>سرانجام 17 سال کار در صنعت نساجی</h2>
+            </div>
+        </div>
+        <div class="fun-fact-area">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                    <div class="fun-fact-card">
+                        <i class="flaticon-success"></i>
+                        <h2><span class="odometer" data-count="125">00</span>+</h2>
+                        <p>پروژه های انجام شده</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                    <div class="fun-fact-card">
+                        <i class="flaticon-experience"></i>
+                        <h2><span class="odometer" data-count="200">00</span>+</h2>
+                        <p>رضایت مشتریان</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                    <div class="fun-fact-card">
+                        <i class="flaticon-guarantee-certificate"></i>
+                        <h2><span class="odometer" data-count="10">00</span>+</h2>
+                        <p>برنده جایزه</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+                    <div class="fun-fact-card">
+                        <i class="flaticon-expert"></i>
+                        <h2><span class="odometer" data-count="70">00</span>+</h2>
+                        <p>کارکنان با تجریه</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="working-process ptb-100">
+    <div class="container">
+        <div class="default-section-title default-section-title-middle">
+            <span>فرآیند ثبت سفارش</span>
+            <h3>چگونه سفارش دهیم</h3>
+        </div>
+        <div class="section-content">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-8 col-12">
+                    <div class="working-process-card-2">
+                        <span>1</span>
+                        <div class="working-process-title-2">
+                            <img src="~/assets/images/icons/choose.jpg" alt="تارین پود">
+                            <h4>
+                                انتخاب محصول
+                            </h4>
+                        </div>
+                        <p>با بررسی لیست محصولات نام محصول مورد نظر خود را در نظر داشته باشید </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-8 col-12">
+                    <div class="working-process-card-2">
+                        <span>2</span>
+                        <div class="working-process-title-2">
+                            <img src="~/assets/images/icons/shopping-cart.jpg" alt="تارین پود">
+                            <h4>
+                                ثبت سفارش
+                            </h4>
+                        </div>
+                        <p>
+                            از طریق شماره تماس های قرار داده شده با ما در ارتباط باشید و محصول مورد نظر خود را سفارش دهید
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-8 col-12">
+                    <div class="working-process-card-2">
+                        <span>3</span>
+                        <div class="working-process-title-2">
+                            <img src="assets/images/icons/certificate.png" alt="تارین پود">
+                            <h4>ارائه خدمات مشتریان</h4>
+                        </div>
+                        <p>
+                            همکاران ما در اسرع وقت سفارش شما را مورد بررسی قرار داده و برای ادامه روند سفارش با شما در ارتباط هستند
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="sign-up ptb-100" style="margin-top : 50px;">
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="sign-up-form-area">
+                    <div class="default-section-title color-title">
+                        <h1 style="color : white;">با ما تماس بگیرید.</h1>
+                        <p>برای مشاوره و دریافت اطلاعات درمورد محصولات با ما تماس بگیرید. سعی ما براین است که در تمامی اوقات پاسخگوی شما باشیم و اطلاعات مورد نیازتان را به شما ارائه کنیم.</p>
+                    </div>
+                    <a class="default-button default-button-2 mt-30" href="/about"><span>بیشتر بدانید <i class="flaticon-left-arrow-1"></i></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
